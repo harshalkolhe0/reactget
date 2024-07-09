@@ -5,6 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 # Install the dependencies
 RUN npm install
+RUN npm i -g serve
 # Copy the app files
 COPY . .
 # Build the app
@@ -12,4 +13,4 @@ RUN npm run build
 # Expose the port
 EXPOSE 5173
 # Run the app
-CMD ["npm", "run","dev"]
+CMD ["serve", "-s","dist"]
