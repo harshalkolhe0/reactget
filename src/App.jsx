@@ -8,8 +8,9 @@ function App() {
         try {
             console.log("Fetching data");
             const host=window.location.hostname;
-const url="http://"+host+":3000/somepath";
-const data = await fetch(url);
+const url="http://"+host+"/somepath";//should include port here
+const parsedUrl=url.replace("5173","3000");
+const data = await fetch(parsedUrl);
             //const data = await fetch("http://localhost:3000/somepath");
 //const data = await fetch("http://ip172-18-0-149-cq6cfg8l2o9000dcfp2g-3000.direct.labs.play-with-docker.com/somepath");
             console.log(data);
