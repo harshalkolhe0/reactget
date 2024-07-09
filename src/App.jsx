@@ -20,11 +20,9 @@ function App() {
             setError("No data found");
         }
     };
-    useEffect(() => {
-        fetchData();
-    }, []);
     return (
         <div>
+<button onClick={()=>fetchData()}>click me</button>
             {details && <p>Hello: {details.hello}</p>}
             {error && <p>{error}</p>}
         </div>
