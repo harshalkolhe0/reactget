@@ -8,7 +8,8 @@ function App() {
         try {
             console.log("Fetching data");
             const host=window.location.hostname;
-const data = await fetch("http://"+host+":3000"+"/somepath");
+const url="http://"+host+":3000/somepath";
+const data = await fetch(url);
             //const data = await fetch("http://localhost:3000/somepath");
 //const data = await fetch("http://ip172-18-0-149-cq6cfg8l2o9000dcfp2g-3000.direct.labs.play-with-docker.com/somepath");
             console.log(data);
